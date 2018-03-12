@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Contactbooks</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Address</th>
+      <th>City</th>
+      <th>Phone</th>
+      <th>Email</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @contactbooks.each do |contactbook| %>
+      <tr>
+        <td><%= contactbook.name %></td>
+        <td><%= contactbook.address %></td>
+        <td><%= contactbook.city %></td>
+        <td><%= contactbook.phone %></td>
+        <td><%= contactbook.email %></td>
+        <td><%= link_to 'Show', contactbook %></td>
+        <td><%= link_to 'Edit', edit_contactbook_path(contactbook) %></td>
+        <td><%= link_to 'Destroy', contactbook, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Contactbook', new_contactbook_path %>

@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @contactbook.name %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @contactbook.address %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @contactbook.city %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @contactbook.phone %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @contactbook.email %>
+</p>
+
+<%= link_to 'Edit', edit_contactbook_path(@contactbook) %> |
+<%= link_to 'Back', contactbooks_path %>
